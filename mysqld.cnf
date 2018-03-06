@@ -1,0 +1,18 @@
+[mysqld]
+server-id=1
+log-bin=mysql-bin
+log-slave-updates=1
+auto_increment_increment=2
+auto_increment_offset=2
+datadir=/var/lib/mysql
+read-only=1
+slave-skip-errors = 1062
+skip-host-cache
+skip-name-resolve
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+#log-error      = /var/log/mysql/error.log
+# By default we only accept connections from localhost
+bind-address    = 0.0.0.0
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
